@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: lianxi
+# key:  lx
+# --
+\begin{lianxi}[  ]
+  $1 
+\end{lianxi}
+
+\begin{solution}
+    $0	 
+\end{solution}

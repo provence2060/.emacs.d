@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: zhenti
+# key:  zt
+# --
+\begin{zhenti}[  ]
+  $1 
+\end{zhenti}
+
+\begin{solution}
+    $0	 
+\end{solution}

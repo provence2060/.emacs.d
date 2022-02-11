@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: liti
+# key:  lt
+# --
+\begin{liti}[  ]
+  $1 
+\end{liti}
+
+\begin{solution}
+    $0	 
+\end{solution}
