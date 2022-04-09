@@ -2,11 +2,11 @@
 ;;
 ;; Filename: init-dashboard.el
 ;; Description: Initialize Dashboard
-;; Author: Mingde (Matthew) Zeng
-;; Copyright (C) 2019 Mingde (Matthew) Zeng
-;; Created: Thu Mar 14 17:21:46 2019 (-0400)
+;; Author: Feng(Simon) Tschen
+;; Copyright (C) 2022 Feng(Simon) Tschen
+;; Created: Sat Apr 9 18:50:01 2022 
 ;; Version: 3.0
-;; URL: https://github.com/MatthewZMD/.emacs.d
+;; URL: https://github.com/provence2060/.emacs.d
 ;; Keywords: M-EMACS .emacs.d dashboard
 ;; Compatibility: emacs-version >= 26.1
 ;;
@@ -59,13 +59,13 @@
    (if (featurep 'all-the-icons)
        `(((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust -0.05)
            "M-EMACS" "Browse M-EMACS Homepage"
-           (lambda (&rest _) (browse-url "https://github.com/MatthewZMD/.emacs.d")))
+           (lambda (&rest _) (browse-url "https://github.com/provence2060/.emacs.d")))
           (,(all-the-icons-fileicon "elisp" :height 1.0 :v-adjust -0.1)
            "Configuration" "" (lambda (&rest _) (edit-configs)))
           (,(all-the-icons-faicon "cogs" :height 1.0 :v-adjust -0.1)
            "Update" "" (lambda (&rest _) (auto-package-update-now)))))
      `((("" "M-EMACS" "Browse M-EMACS Homepage"
-         (lambda (&rest _) (browse-url "https://github.com/MatthewZMD/.emacs.d")))
+         (lambda (&rest _) (browse-url "https://github.com/provence2060/.emacs.d")))
         ("" "Configuration" "" (lambda (&rest _) (edit-configs)))
         ("" "Update" "" (lambda (&rest _) (auto-package-update-now)))))))
   :custom-face
