@@ -49,8 +49,8 @@
   (eaf-start-python-process-when-require t)
   (eaf-browser-default-zoom 1.25)
   (eaf-browser-dark-mode nil)
+  (eaf-browser-scroll-step 200)
   (eaf-browser-enable-adblocker t)
-  (eaf-browser-enable-autofill t)
   (eaf-file-manager-show-preview nil)
   (eaf-pdf-dark-mode "ignore")
   :demand
@@ -82,6 +82,7 @@
   (require 'eaf-browser nil t)
   (require 'eaf-org)
   (require 'eaf-mail)
+  (require 'eaf-git)
   (when (display-graphic-p)
     (require 'eaf-all-the-icons))
   (defalias 'browse-web #'eaf-open-browser)
@@ -90,7 +91,8 @@
   (eaf-bind-key open_devtools "M-i" eaf-browser-keybinding)
   (eaf-bind-key insert_or_recover_prev_close_page "X" eaf-browser-keybinding)
   (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key clear_cookies "C-M-q" eaf-browser-keybinding)
+  (eaf-bind-key delete_cookies "C-M-q" eaf-browser-keybinding)
+  (eaf-bind-key delete_all_cookies "C-M-Q" eaf-browser-keybinding)
   (eaf-bind-key clear_history "C-M-p" eaf-browser-keybinding)
   (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
   (eaf-bind-key scroll_down_page "u" eaf-pdf-viewer-keybinding)
@@ -122,7 +124,9 @@
   :custom
   (popweb-popup-pos "point-bottom")
   :hook ((org-mode . popweb-latex-mode)
-         (tex-mode . popweb-latex-mode)))
+         (tex-mode . popweb-latex-mode)
+         (ein:markdown-mode . popweb-latex-mode))
+  )
 ;; -PopwebPac
 
 (provide 'init-eaf)
