@@ -71,15 +71,11 @@
   :custom-face
   (dashboard-banner-logo-title ((t (:family "Love LetterTW" :height 123))))
   :config
-  (dashboard-modify-heading-icons '((recents . "file-text")
-                                    (bookmarks . "book")))
   (dashboard-setup-startup-hook)
   ;; Open Dashboard function
   (defun open-dashboard ()
     "Open the *dashboard* buffer and jump to the first widget."
     (interactive)
-    (if (get-buffer dashboard-buffer-name)
-        (kill-buffer dashboard-buffer-name))
     (dashboard-insert-startupify-lists)
     (switch-to-buffer dashboard-buffer-name)
     (goto-char (point-min))

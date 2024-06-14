@@ -38,15 +38,6 @@
 (eval-when-compile
   (require 'init-const))
 
-;; AweshellPac
-(use-package aweshell
-  :load-path (lambda () (expand-file-name "site-elisp/aweshell" user-emacs-directory))
-  :commands (aweshell-new aweshell-dedicated-open)
-  :bind
-  (("M-#" . aweshell-dedicated-open)
-   (:map eshell-mode-map ("M-#" . aweshell-dedicated-close))))
-;; -AweshellPac
-
 ;; ShellHerePac
 (use-package shell-here
   :bind ("M-~" . shell-here)
@@ -93,6 +84,13 @@
   :if (not (display-graphic-p))
   :config (term-keys-mode t))
 ;; -TermKeysPac
+
+;; ExecPathFromShellPac
+(use-package exec-path-from-shell
+  :if (memq window-system '(mac ns x))
+  :config
+  (exec-path-from-shell-initialize))
+;; -ExecPathFromShellPac
 
 (provide 'init-shell)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
